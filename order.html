@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabulous Sweetness | Заказ десертов</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>Fabulous Sweetness</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="order.html" class="active">Заказ</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <div class="cart-icon">
+                    <a href="order.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Корзина и форма заказа -->
+    <section class="order-section">
+        <div class="container">
+            <div class="order-form-container">
+                <div class="order-form">
+                    <h2>Оформление заказа</h2>
+                    
+                    <div class="cart-summary" id="cartSummary">
+                        <!-- Здесь будет отображаться корзина -->
+                        <p>Ваша корзина пуста. Добавьте товары из <a href="catalog.html">каталога</a>.</p>
+                    </div>
+                    
+                    <form id="orderForm" action="php/send_email.php" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Имя *</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон *</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Адрес доставки *</label>
+                            <input type="text" id="address" name="address" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Дата доставки *</label>
+                                <input type="date" id="date" name="date" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Время доставки</label>
+                                <select id="time" name="time" class="form-control">
+                                    <option value="10:00-12:00">10:00 - 12:00</option>
+                                    <option value="12:00-14:00">12:00 - 14:00</option>
+                                    <option value="14:00-16:00">14:00 - 16:00</option>
+                                    <option value="16:00-18:00">16:00 - 18:00</option>
+                                    <option value="18:00-20:00">18:00 - 20:00</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="comment">Комментарий к заказу</label>
+                            <textarea id="comment" name="comment" class="form-control" placeholder="Особые пожелания, аллергии и т.д."></textarea>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="agree" name="agree" required>
+                            <label for="agree">Я согласен с условиями обработки персональных данных *</label>
+                        </div>
+                        
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn-primary">Оформить заказ</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-birthday-cake"></i>
+                        <span>Fabulous Sweetness</span>
+                    </a>
+                    <p>Создаем сладкие моменты с 2018 года</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Меню</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="order.html">Заказ</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Сладкая, 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@fabulous-sweetness.ru</p>
+                    <p><i class="fas fa-clock"></i> Ежедневно 9:00 - 21:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Fabulous Sweetness. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Отображение корзины на странице заказа
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartDisplay();
+            
+            // Устанавливаем минимальную дату доставки на завтра
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            const minDate = tomorrow.toISOString().split('T')[0];
+            document.getElementById('date').min = minDate;
+            
+            // Устанавливаем максимальную дату доставки на 30 дней вперед
+            const maxDate = new Date(today);
+            maxDate.setDate(maxDate.getDate() + 30);
+            document.getElementById('date').max = maxDate.toISOString().split('T')[0];
+        });
+        
+        function updateCartDisplay() {
+            const cartSummary = document.getElementById('cartSummary');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            if (cart.length === 0) {
+                cartSummary.innerHTML = '<p>Ваша корзина пуста. Добавьте товары из <a href="catalog.html">каталога</a>.</p>';
+                return;
+            }
+            
+            let html = '<h3>Ваш заказ</h3><div class="cart-items">';
+            let total = 0;
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                html += `
+                    <div class="cart-item">
+                        <div class="cart-item-name">${item.name}</div>
+                        <div class="cart-item-quantity">${item.quantity} шт.</div>
+                        <div class="cart-item-price">${item.price} ₽/шт.</div>
+                        <div class="cart-item-total">${itemTotal} ₽</div>
+                        <button class="btn-remove" data-id="${item.id}"><i class="fas fa-times"></i></button>
+                    </div>
+                `;
+            });
+            
+            html += `
+                <div class="cart-total">
+                    <strong>Итого: ${total} ₽</strong>
+                </div>
+            </div>`;
+            
+            cartSummary.innerHTML = html;
+            
+            // Добавляем обработчики для кнопок удаления
+            document.querySelectorAll('.btn-remove').forEach(button => {
+                button.addEventListener('click', function() {
+                    const itemId = this.getAttribute('data-id');
+                    removeFromCart(itemId);
+                });
+            });
+        }
+        
+        function removeFromCart(itemId) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = cart.filter(item => item.id != itemId);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            updateCartDisplay();
+            updateCartCount();
+        }
+        
+        function updateCartCount() {
+            const cartCount = document.querySelector('.cart-count');
+            if (cartCount) {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                cartCount.textContent = totalItems;
+            }
+        }
+    </script>
+</body>
+</html>

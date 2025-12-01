@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabulous Sweetness | Сладкие радости</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>Fabulous Sweetness</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="order.html">Заказ</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <div class="cart-icon">
+                    <a href="order.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Герой секция -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Сладкие радости для каждого момента</h1>
+                <p class="hero-subtitle">Изготовленные с любовью десерты, которые сделают ваш день особенным</p>
+                <a href="catalog.html" class="btn-primary">Посмотреть каталог</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/cake-1.jpg" alt="Торт кондитерской" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Популярные товары -->
+    <section class="popular-section">
+        <div class="container">
+            <h2 class="section-title">Популярные десерты</h2>
+            <div class="desserts-grid">
+                <div class="dessert-card">
+                    <div class="dessert-img">
+                        <img src="images/cake-2.jpg" alt="Торт клубничный">
+                    </div>
+                    <div class="dessert-info">
+                        <h3>Клубничный торт</h3>
+                        <p>Нежный бисквит со свежей клубникой и кремом</p>
+                        <div class="dessert-footer">
+                            <span class="price">1 850 ₽</span>
+                            <button class="btn-cart" data-id="1"><i class="fas fa-plus"></i> В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dessert-card">
+                    <div class="dessert-img">
+                        <img src="images/macarons-1.jpg" alt="Макаруны">
+                    </div>
+                    <div class="dessert-info">
+                        <h3>Набор макарун</h3>
+                        <p>6 разноцветных макарун с разными начинками</p>
+                        <div class="dessert-footer">
+                            <span class="price">650 ₽</span>
+                            <button class="btn-cart" data-id="2"><i class="fas fa-plus"></i> В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dessert-card">
+                    <div class="dessert-img">
+                        <img src="images/cupcakes-1.jpg" alt="Капкейки">
+                    </div>
+                    <div class="dessert-info">
+                        <h3>Капкейки</h3>
+                        <p>Набор из 6 капкейков с разными топпингами</p>
+                        <div class="dessert-footer">
+                            <span class="price">720 ₽</span>
+                            <button class="btn-cart" data-id="3"><i class="fas fa-plus"></i> В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dessert-card">
+                    <div class="dessert-img">
+                        <img src="images/donuts-1.jpg" alt="Пончики">
+                    </div>
+                    <div class="dessert-info">
+                        <h3>Пончики</h3>
+                        <p>6 воздушных пончиков с глазурью и посыпкой</p>
+                        <div class="dessert-footer">
+                            <span class="price">480 ₽</span>
+                            <button class="btn-cart" data-id="4"><i class="fas fa-plus"></i> В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>С любовью</h3>
+                    <p>Каждый десерт приготовлен с заботой и вниманием к деталям</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Натуральные ингредиенты</h3>
+                    <p>Используем только свежие и качественные продукты</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Быстрая доставка</h3>
+                    <p>Доставим ваш заказ в день оформления</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Гарантия качества</h3>
+                    <p>Если что-то не понравится - вернем деньги</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-birthday-cake"></i>
+                        <span>Fabulous Sweetness</span>
+                    </a>
+                    <p>Создаем сладкие моменты с 2025 года</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Меню</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="order.html">Заказ</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Сладкая, 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@fabulous-sweetness.ru</p>
+                    <p><i class="fas fa-clock"></i> Ежедневно 9:00 - 21:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fabulous Sweetness. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
